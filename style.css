@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: #ecf0f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+h1 {
+  font-family: "New Rocker", cursive;
+  font-size: 5rem;
+  color: #000;
+  letter-spacing: 5px;
+  margin: 0.4em 0em 0.7em 0em;
+}
+.container {
+  max-width: 90%;
+  border-radius: 20px;
+  padding: 3em 4em;
+  box-shadow: 15px 15px 20px 20px #cbced1, -15px -15px 20px 20px #fff;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row + .row {
+  margin-top: 4em;
+}
+select {
+  padding: 1em;
+  margin-right: 4em;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 10px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #ecf0f3;
+  box-shadow: inset 5px 5px 5px #cbced1, -5px 5px 5px #fff;
+}
+.custom-select {
+  position: relative;
+  min-width: 20%;
+}
+
+.custom-arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 6rem;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5em;
+}
+.arrow-down {
+  font-size: 3.5rem;
+  background-color: #ecf0f3;
+}
+.tiles {
+  display: flex;
+  min-width: 80%;
+  justify-content: flex-end;
+}
+.tile {
+  height: 8em;
+  width: 8em;
+  margin-left: 3em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.crash-tiles > .tile {
+  background: #0e8ec9;
+}
+.hihat-tiles > .tile {
+  background: #9b8feb;
+}
+.kick-tiles > .tile {
+  background: #eb92c7;
+}
+.snare-tiles > .tile {
+  background: #f39e9d;
+}
+.tom-tiles > .tile {
+  background: #f1c065;
+}
+
+.active {
+  box-shadow: 5px 5px 10px black;
+}
+.crash-tiles > .tile.active {
+  background: #01618d;
+}
+.hihat-tiles > .tile.active {
+  background: #58508d;
+}
+.kick-tiles > .tile.active {
+  background: #bc5090;
+}
+.snare-tiles > .tile.active {
+  background: #ff6361;
+}
+.tom-tiles > .tile.active {
+  background: #ffa600;
+}
+.controls {
+  padding: 2em 8em;
+  margin-top: 3.5em;
+  min-width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px #cbced1, -15px -15px 20px #fff;
+  order: 1;
+}
+
+.play {
+  padding: 0.5em 1.5em;
+  margin-top: 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  box-shadow: inset 10px 10px 10px #cbced1, inset -4px -4px 5px 2px#fff;
+  position: relative;
+  z-index: 999;
+}
+
+#play-btn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+h3 {
+  font-size: 3rem;
+}
+.minus,
+.plus {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.settings {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bpm-value {
+  background-color: #ecf0f3;
+  box-shadow: inset 5px 5px 5px #cbced1, -2px -2px 5px 5px #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 7px 10px;
+  width: 30%;
+  font-size: 3rem;
+  margin: 0.2em;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/*media query*/
+@media (max-width: 1250px) {
+  .container {
+    min-width: 70%;
+    flex-direction: row;
+    align-items: flex-end;
+    order: 2;
+    justify-content: space-between;
+  }
+  .row {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+  .tiles {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5em;
+  }
+
+  .tile {
+    margin: 0;
+    margin-bottom: 1.5em;
+  }
+  .controls {
+    order: 1;
+    margin-bottom: 5em;
+    max-width: 90%;
+  }
+  .custom-select {
+    min-width: 10%;
+  }
+
+  select {
+    padding: 1em 0.5em;
+    font-size: 1.5em;
+    width: 100%;
+    margin-right: 0;
+  }
+  .custom-arrow {
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 0.5em;
+  }
+}
+
+@media (max-width: 970px) {
+  .container {
+    padding: 1em 0.4em;
+  }
+  .custom-select {
+    max-width: 70%;
+  }
+  .controls {
+    padding: 1em 2em;
+  }
+}
+@media (max-width: 540px) {
+  .tile {
+    height: 6em;
+    width: 6em;
+  }
+  .bpm-value {
+    min-width: 40%;
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Let's &nbsp Rock!</h1>
+    <div class="container">
+      <section class="row">
+        <div class="custom-select">
+          <select name="crash" id="crash">
+            <option value="./sounds/crash-acoustic.wav">Crash acoustic</option>
+            <option value="./sounds/crash-tape.wav">Crash tape</option>
+          </select>
+          <span class="custom-arrow"
+            ><i class="fas fa-caret-down arrow-down"></i
+          ></span>
+        </div>
+        <div class="tiles crash-tiles">
+          <div class="tile n0"></div>
+          <div class="tile n1"></div>
+          <div class="tile n2"></div>
+          <div class="tile n3"></div>
+          <div class="tile n4"></div>
+          <div class="tile n5"></div>
+          <div class="tile n6"></div>
+          <div class="tile n7"></div>
+      
+          
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="custom-select">
+          <select name="hihat" id="hihat">
+            <option value="./sounds/hihat-808.wav">Hihat 808</option>
+            <option value="./sounds/hihat-acoustic01.wav">
+              Hihat acoustic
+            </option>
+            <option value="./sounds/hihat-dist01.wav">Hihat dist</option>
+          </select>
+          <span class="custom-arrow"
+            ><i class="fas fa-caret-down arrow-down"></i
+          ></span>
+        </div>
+        <div class="tiles hihat-tiles">
+          <div class="tile n0"></div>
+          <div class="tile n1"></div>
+          <div class="tile n2"></div>
+          <div class="tile n3"></div>
+          <div class="tile n4"></div>
+          <div class="tile n5"></div>
+          <div class="tile n6"></div>
+          <div class="tile n7"></div>
+          
+          
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="custom-select">
+          <select name="kick" id="kick">
+            <option value="./sounds/kick-acoustic01.wav">Kick acoustic</option>
+            <option value="./sounds/kick-classic.wav">Kick classic</option>
+            <option value="./sounds/kick-tight.wav">Kick tight</option>
+          </select>
+          <span class="custom-arrow"
+            ><i class="fas fa-caret-down arrow-down"></i
+          ></span>
+        </div>
+        <div class="tiles kick-tiles">
+          <div class="tile n0"></div>
+          <div class="tile n1"></div>
+          <div class="tile n2"></div>
+          <div class="tile n3"></div>
+          <div class="tile n4"></div>
+          <div class="tile n5"></div>
+          <div class="tile n6"></div>
+          <div class="tile n7"></div>
+          
+         
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="custom-select">
+          <select name="snare" id="snare">
+            <option value="./sounds/snare-808.wav">Snare 808</option>
+            <option value="./sounds/snare-acoustic01.wav">
+              Snare acoustic
+            </option>
+            <option value="./sounds/snare-dist01.wav">Snare dist</option>
+          </select>
+          <span class="custom-arrow"
+            ><i class="fas fa-caret-down arrow-down"></i
+          ></span>
+        </div>
+        <div class="tiles snare-tiles">
+          <div class="tile n0"></div>
+          <div class="tile n1"></div>
+          <div class="tile n2"></div>
+          <div class="tile n3"></div>
+          <div class="tile n4"></div>
+          <div class="tile n5"></div>
+          <div class="tile n6"></div>
+          <div class="tile n7"></div>
+          
+          
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="custom-select">
+          <select name="tom" id="tom">
+            <option value="./sounds/tom-808.wav">Tom 808</option>
+            <option value="./sounds/tom-acoustic01.wav">Tom acoustic</option>
+          </select>
+          <span class="custom-arrow"
+            ><i class="fas fa-caret-down arrow-down"></i
+          ></span>
+        </div>
+        <div class="tiles tom-tiles">
+          <div class="tile n0"></div>
+          <div class="tile n1"></div>
+          <div class="tile n2"></div>
+          <div class="tile n3"></div>
+          <div class="tile n4"></div>
+          <div class="tile n5"></div>
+          <div class="tile n6"></div>
+          <div class="tile n7"></div>
+          
+          
+        </div>
+      </section>
+    </div>
+    <section class="controls">
+      <div class="console">
+        <h3>Play</h3>
+        <button class="play">
+          <img id="play-btn" src="./img/play.svg"></img>
+        </button>
+      </div>
+
+      <div class="tempo">
+        <h3>Frequency</h3>
+        <div class="settings">
+          <div class="less"><i class="fas fa-minus-square minus"></i></div>
+          <input type="text" value="150" class="bpm-value" />
+          <div class="more"><i class="fas fa-plus-square plus"></i></div>
+        </div>
+      </div>
+    </section>
+    <audio src="./sounds/crash-acoustic.wav" class="crash-sound"></audio>
+    <audio src="./sounds/hihat-808.wav" class="hihat-sound"></audio>
+    <audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
+    <audio src="./sounds/snare-808.wav" class="snare-sound"></audio>
+    <audio src="./sounds/tom-acoustic01.wav" class="tom-sound"></audio>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+      integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
